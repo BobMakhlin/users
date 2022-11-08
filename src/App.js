@@ -1,15 +1,20 @@
-import './App.css';
-import UserList from './components/User/UserList';
-
-const DEFAULT_USERS = [
-  {id: "17ef964b-23df-434d-b38e-dad7324719a9", name: "Max", age: 31},
-  {id: "17ef964b-23df-434d-b38e-dad7324719a1", name: "Max", age: 31}
-];
+import { useState } from "react";
+import "./App.css";
+import UserForm from "./components/NewUser/UserForm";
+import UserList from "./components/User/UserList";
 
 function App() {
+  const [users, setUsers] = useState([]);
+
+  const handleFormSubmit = (user) => {
+    console.log("handleFormSubmit. user: ", user);
+    setUsers((prevUsers) => [...prevUsers, user]);
+  };
+
   return (
     <div className="App">
-      <UserList models={DEFAULT_USERS} />
+      <UserForm onSubmit={handleFormSubmit} />
+      <UserList models={users} />
     </div>
   );
 }
