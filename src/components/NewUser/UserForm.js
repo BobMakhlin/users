@@ -2,6 +2,7 @@ import { useState } from "react";
 import Card from "../UI/Card";
 import styles from "./UserForm.module.css";
 import { v4 as uuidv4 } from "uuid";
+import Button from "../UI/Button";
 
 const UserForm = ({ onSubmit }) => {
   const [username, setUsername] = useState("");
@@ -41,7 +42,7 @@ const UserForm = ({ onSubmit }) => {
           </div>
         </div>
         <div className={styles.actions}>
-          <button>Add User</button>
+          <Button>Add User</Button>
         </div>
       </form>
     </Card>
