@@ -5,3 +5,8 @@ body {
   width: 50rem;
   max-width: 95%;
 }
+
+#root,
+.App {
+  width: 100%;
+}
