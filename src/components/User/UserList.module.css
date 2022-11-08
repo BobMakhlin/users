@@ -7,8 +7,7 @@
 .user {
     width: 100%;
     border: 2.15px solid #D5D4D4;
-    padding: 0.25em;
-    width: 100%;
     box-sizing: border-box;
+    padding: 0.25em;
     margin-bottom: 0.55em;
 }
