@@ -3,6 +3,7 @@
   flex-direction: column;
   position: absolute;
   width: 50rem;
+  height: 12rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -20,8 +21,9 @@
 
 .content {
   flex-grow: 1;
-  margin-top: 2em;
-  margin-bottom: 4em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.9em;
 }
 
 .actions {
