@@ -1,0 +1,37 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 50rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 0.55em;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #40005d;
+  color: white;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.content {
+  flex-grow: 1;
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+
+.actions {
+  padding-bottom: 0.5em;
+  text-align: right;
+}
+
+.header,
+.content,
+.actions {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
