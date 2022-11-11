@@ -6,9 +6,11 @@ const ErrorDialog = ({ isOpen, onClose, title, message }) => {
   return (
     <Modal isOpen={isOpen}>
       <div className={styles.modal}>
-        <div>{title}</div>
-        <div>{message}</div>
-        <div>
+        <div className={styles.header}>
+          <p>{title}</p>
+        </div>
+        <div className={styles.content}>{message}</div>
+        <div className={styles.actions}>
           <Button onClick={onClose}>Okay</Button>
         </div>
       </div>
