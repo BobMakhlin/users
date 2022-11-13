@@ -1,11 +1,22 @@
 import styles from "./Modal.module.css";
 
-const Modal = ({ isOpen, children }) => {
+const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) {
     return null;
   }
 
-  return <div className={styles.backdrop}>{children}</div>;
+  const handleBackdropClick = (event) => {
+    if (event.target !== event.currentTarget) {
+      return;
+    }
+    onClose();
+  };
+
+  return (
+    <div onClick={handleBackdropClick} className={styles.backdrop}>
+      {children}
+    </div>
+  );
 };
 
 export default Modal;
