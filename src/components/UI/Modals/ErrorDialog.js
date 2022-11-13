@@ -5,7 +5,7 @@ import Card from "../Card";
 
 const ErrorDialog = ({ isOpen, onClose, title, message }) => {
   return (
-    <Modal isOpen={isOpen}>
+    <Modal onClose={onClose} isOpen={isOpen}>
       <Card className={styles.modal}>
         <header>
           <h2>{title}</h2>
