@@ -5,11 +5,7 @@ const Modal = ({ isOpen, children }) => {
     return null;
   }
 
-  return (
-    <div className={styles.modalBackground}>
-      {children}
-    </div>
-  );
+  return <div className={styles.backdrop}>{children}</div>;
 };
 
 export default Modal;

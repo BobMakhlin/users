@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import UserForm from "./components/NewUser/UserForm";
+import AddUserForm from "./components/User/AddUserForm";
 import UserList from "./components/User/UserList";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <UserForm onSubmit={handleFormSubmit} />
+      <AddUserForm onSubmit={handleFormSubmit} />
       <UserList models={users} />
     </div>
   );
