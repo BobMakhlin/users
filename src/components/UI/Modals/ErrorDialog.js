@@ -1,19 +1,22 @@
-import Button from "./Button";
+import Button from "../Button";
 import styles from "./ErrorDialog.module.css";
 import Modal from "./Modal";
+import Card from "../Card";
 
 const ErrorDialog = ({ isOpen, onClose, title, message }) => {
   return (
     <Modal isOpen={isOpen}>
-      <div className={styles.modal}>
-        <div className={styles.header}>
-          <p>{title}</p>
+      <Card className={styles.modal}>
+        <header>
+          <h2>{title}</h2>
+        </header>
+        <div className={styles.content}>
+          <p>{message}</p>
         </div>
-        <div className={styles.content}>{message}</div>
-        <div className={styles.actions}>
+        <footer>
           <Button onClick={onClose}>Okay</Button>
-        </div>
-      </div>
+        </footer>
+      </Card>
     </Modal>
   );
 };
